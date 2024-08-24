@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <title>Sign up HouseHub</title>
+</head>
+<body>
+    <section class="main">
+        <div class="marquee-container">
+            <div class="marquee">
+                <p>We are currently working to increase the number of hostels. Please bare with us </p>
+            </div>
+        </div>
+        
+        <div class="logo-container">
+            <div class="logo">
+                <img src="{% static 'Designer(1).jpeg' %}" alt="Error!">
+            </div>
+            <div class="company-name">
+                <p class="the-name">HOUSE HUB</p>
+                <p class="the-slogan">with you for you!</p>
+            </div>
+        </div>
+        <div class="credentials-container">
+            <form id="signupForm" action="#" method="post">
+                <label for="#">Full name</label>
+                <input type="text" required>
+                <label for="#">Category</label>
+                <input type="text" value="student" readonly style="color: #999999; /* Replace with your desired color */
+                opacity: 1; /* Ensures the color is not faded */;">
+                <label for="#">Username</label>
+                <input type="text" required>
+                <label for="#">Email</label>
+                <input type="email" id="email" name="email" required>
+                <p id="error-message" style="color:red; display:none;">Please enter a valid Gmail address.</p>
+                <label for="#">Password</label>
+                <input type="password" required>
+                <label for="#">Confirm Password</label>
+                <input type="password" required>
+                <div class="terms-conditions">
+                    <input type="checkbox" required><a href="#">I agree to terms and conditions</a>
+                </div>
+                <div class="line"></div>
+                <button type="submit">Sign Up</button>
+                
+            </form>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="line-footer"></div>
+        <p>&copy; 2024 HouseHub. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'email.js' %}"></script>
+</body>
+</html>

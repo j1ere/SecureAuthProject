@@ -1,0 +1,389 @@
+body{
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #F2F4F7;
+}
+.main{
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    width: 60%;
+    background-color: none;
+    height: 100vh;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50% -50%);
+    background: #F2F4F7;
+    /* overflow-y: auto; */
+}
+
+/* Make the container full-width at the top */
+.marquee-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: green; /* Background color of the div */
+    color: white; /* Text color */
+    overflow: hidden; /* Hide the overflow to create the scrolling effect */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* The marquee text */
+.marquee {
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    
+    animation: scroll-left 20s linear infinite; /* Adjust speed with duration */
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End off the left side */
+    }
+}
+
+
+.logo-container{
+    background: none;
+    display: flex;
+    height: 30%;
+    
+
+}
+.credentials-container{
+    background: #FFFFFF;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.292);
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
+    width: 65%;
+    height: auto;
+    min-height: 300px;
+}
+.credentials-container form {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
+    background-color: none;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.credentials-container form label{
+    align-self: flex-start; /*this overides the align-items property*/
+    align-items: left;
+    background-color: white;
+    padding-left: 17px;
+    font-size: 14px;
+    color: #444444;
+}
+.credentials-container input:nth-child(n+1){
+    margin-bottom: 10px;
+
+}
+.credentials-container input
+{
+    width: 85%;
+    max-width: 300px;/* Limit width to avoid stretching too much */
+    height: 25px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 0px; 
+    font-size: 14px;
+    background-color: #F2F4F7;
+    color: #444444;
+    font-size: 14px;
+}
+.credentials-container form button{
+    width: 91%;
+    max-width: 300px;/* Limit width to avoid stretching too much */
+    height: 50px;
+    padding: 10px;
+    border: 0px;
+    margin-top: 15px;
+    border-radius: 0px; 
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: #012970;
+    cursor: pointer;
+    transition: background-color 0.3s ease transform 0.3s ease;
+}
+
+.credentials-container form button:hover{
+    background-color: #13439A;
+    transform: scale(1.02);
+}
+
+.logo-container .logo{
+    width: 36%;
+}
+.logo-container .logo img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.logo-container .company-name{
+    background-color: none;
+    height: 30%;
+    margin-top: 10%;
+}
+.logo-container .company-name .the-name{
+    font-size: 30px;
+    font-weight: bold;
+    color: #012970;
+    margin: 0px 0px;
+}
+.logo-container .company-name .the-slogan{
+    font-style: italic;
+    text-align: center;
+    color: #0D6EFD;
+    margin: 10px 0px;
+}
+/* .credentials-container p{
+    font-size: 14px;
+} */
+
+.credentials-container .passwd{
+    background: none;
+    width: 100%;
+    margin-top: 2px;
+   
+}
+.credentials-container .passwd p{
+    margin: 0px 0px;
+    margin-left: 20px;
+   
+}
+.credentials-container .passwd a{
+    text-decoration: none;
+    color: #444444;
+}
+
+.credentials-container .passwd a:hover{
+    text-decoration:underline;
+    color: black;
+}
+
+.credentials-container .forgot-password{
+    text-align: left;
+}
+
+.credentials-container .line{
+    background: #444444;
+    width: 90%;
+    height: 1px;
+    margin-top: 20px;
+}
+.terms-conditions{
+    display: flex;
+    background-color: none;
+    width: 100%;
+    font-size: 14px;
+    height: auto;
+}
+.terms-conditions a{
+    width: 80%;
+    margin-top: 5px;
+    margin-left: -10px;
+    text-decoration-line: none;
+    color: #444444;
+}
+.terms-conditions input{
+    align-self: flex-start;
+    text-align: left;
+    width: 20%;
+    
+}
+footer{
+    background: none;
+    text-align: center;
+    margin-top: -55px;
+    color: #444444;
+}
+
+@media(max-width: 470px){
+    .credentials-container form label{
+        align-self: center;
+        align-items: left;
+        background-color:yellow;
+        padding-left: 0vw;
+        font-size: 14px;
+        color: #444444;
+        width: 100%;
+        max-width: 300px;
+        text-align: start;
+    }
+}
+@media(max-width: 768px){
+    .main{
+        margin: 0 auto;
+        flex: 1;
+        overflow-y: auto;
+        /* margin-top: 100px; */
+        width: 98%;
+        background-color: none;
+        height: 100vh;
+        display:block;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0% 0%);
+        background: #F2F4F7;
+        
+    
+    }
+    .logo-container{
+        background:none;
+        display: block;
+        height: 25vh;
+        margin-top: 0vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-container .logo{
+        position: relative;
+        width: 30%;
+        margin: 0 auto;
+        background-color: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-container .logo img{
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        border-radius: 50%;
+    }
+    .logo-container .company-name{
+        display: none;
+    }
+    .credentials-container{
+        background:none;
+        box-shadow: none;
+        border-radius: 0px; 
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Horizontally center items */
+        justify-content: center; /* Vertically center items */
+        text-align: center; /* Center text inside the container */
+        width: 100%;
+        height: auto;
+        overflow-y: auto; /* Enables vertical scrolling */
+        flex-shrink: 0; /* Prevents shrinking */
+    }
+    .credentials-container form{
+        background-color: none;
+    }
+    .credentials-container form label{
+        align-self: center;
+        align-items: left;
+        background-color:#F2F4F7;
+        padding-left: 0vw;
+        font-size: 14px;
+        color: #444444;
+        width: 89%;
+        max-width: 400px;
+        text-align: start;
+    }
+    .credentials-container input
+    {
+        border-radius: 10px; 
+        max-width: 400px;
+        background: #FFFFFF;
+    }
+    
+
+    .terms-conditions{
+        display: flex;
+        background-color: none;
+        width: 85%;
+        max-width: 420px;
+        font-size: 14px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .terms-conditions a{
+        background-color: none;
+        width: 85%;
+        margin-left: -2vw;
+        margin-top: -10px;
+        text-align: left;
+    }
+    .terms-conditions input{
+        width: 15%;
+        margin-left: -2vw;
+        align-self: flex-start;
+        text-align: left;
+    }
+    .credentials-container form button{
+        width: 90%;
+        max-width: 420px;/* Limit width to avoid stretching too much */
+        border-radius: 20px; 
+    }
+    .credentials-container .line{
+        display: none;
+    }
+
+    footer{
+        position:relative;
+        background:none;
+        text-align: center;
+        margin-top: -55px;
+        color: #444444;
+    }
+
+    .line-footer{
+        background: #444444;
+        width: 90%;
+        height: 1px;
+        margin: 0 auto;
+    }
+}
+@media(max-height: 830px) and (max-width: 768px){
+    footer{
+        position:relative;
+        background: none;
+        text-align: center;
+        margin-top: 0px;
+        color: #444444;
+    }
+}
+@media(min-width: 769px) and (max-width: 1028px){
+    .main{
+        width: 95%;
+    }
+    .credentials-container{
+        width: 70%;
+       
+    }
+}
+@media(min-width: 1029px) and (max-width: 1250px){
+    .main{
+        width: 80%;
+    }
+    .credentials-container{
+        width: 70%;
+       
+    }
+    .credentials-container form label{
+        padding-left: 25px;
+        
+    }
+}

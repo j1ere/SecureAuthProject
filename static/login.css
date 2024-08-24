@@ -1,0 +1,352 @@
+body{
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #F2F4F7;
+    align-items: center;
+}
+.main{
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    width: 60%;
+    background-color: none;
+    height: 100vh;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50% -50%);
+    background: #F2F4F7;
+    /* overflow-y: auto; */
+}
+.logo-container{
+    background: none;
+    display: flex;
+    height: 30%;
+    
+
+}
+.credentials-container{
+    background: #FFFFFF;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.292);
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
+    text-align: center; /* Center text inside the container */
+    width: 60%;
+    height: auto;
+    min-height: 300px;
+}
+.credentials-container form {
+
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements horizontally */
+    width: 100%;
+}
+.credentials-container input:nth-child(n+1){
+    margin-top: 10px;
+
+}
+.credentials-container input
+{
+    width: 85%;
+    max-width: 300px;/* Limit width to avoid stretching too much */
+    height: 25px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px; 
+    font-size: 14px;
+    background-color: #F2F4F7;
+    color: #444444;
+    font-size: 14px;
+}
+
+.credentials-container form button{
+    width: 91%;
+    max-width: 300px;/* Limit width to avoid stretching too much */
+    height: 50px;
+    padding: 10px;
+    border: 0px;
+    margin-top: 15px;
+    border-radius: 10px; 
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: #012970;
+    cursor: pointer;
+    transition: background-color 0.3s ease transform 0.3s ease;
+}
+
+.credentials-container form button:hover{
+    background-color: #13439A;
+    transform: scale(1.02);
+}
+
+.logo-container .logo{
+    width: 36%;
+}
+.logo-container .logo img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.logo-container .company-name{
+    background-color: none;
+    height: 30%;
+    margin-top: 10%;
+}
+.logo-container .company-name .the-name{
+    font-size: 30px;
+    font-weight: bold;
+    color: #012970;
+    margin: 0px 0px;
+}
+.logo-container .company-name .the-slogan{
+    font-style: italic;
+    text-align: center;
+    color: #0D6EFD;
+    margin: 10px 0px;
+}
+/* .credentials-container p{
+    font-size: 14px;
+} */
+
+.credentials-container .passwd{
+    background: none;
+    width: 100%;
+    margin-top: 2px;
+   
+}
+.credentials-container .passwd p{
+    margin: 0px 0px;
+    margin-left: 20px;
+   
+}
+.credentials-container .passwd a{
+    text-decoration: none;
+    color: #444444;
+}
+
+.credentials-container .passwd a:hover{
+    text-decoration:underline;
+    color: black;
+}
+
+.credentials-container .forgot-password{
+    text-align: left;
+}
+.credentials-container .or-signup{
+    background: black;
+    width: 91%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50px;
+}
+.credentials-container .line{
+    background: #444444;
+    width: 90%;
+    height: 1px;
+    margin-top: 20px;
+}
+.credentials-container .login-as-caretaker{
+    margin-top: 7px;
+    color: #012970;
+}
+.credentials-container .login-as-caretaker a{
+    color: #012970;
+
+}
+.credentials-container .or-signup button{
+    background-color: #981E1E;
+    width: 100%;
+    height: 100%;  
+    border: none;  
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.credentials-container .or-signup button:hover{
+    background-color: #CE4242;
+    transform: scale(1.02);/*slightly increase size on hover*/
+}
+.credentials-container .or-signup a{
+    text-decoration-line: none;
+    
+}
+footer{
+    position: absolute;
+    background: none;
+    text-align: center;
+    transform: translateY(-70px);
+    color: #444444;
+    width: 100vw;
+}
+
+
+@media(max-width: 768px){
+    .main{
+        margin: 0 auto;
+        /* margin-top: 100px; */
+        width: 98%;
+        background-color: none;
+        height: 100vh;
+        display:block;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0% 0%);
+        background: #F2F4F7;
+    
+    }
+    .logo-container{
+        background:none;
+        display: block;
+        height: 30vh;
+        margin-top: 0vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-container .logo{
+        position: relative;
+        width: 30%;
+        margin: 0 auto;
+       
+        height: 92%;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-container .logo img{
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        border-radius: 50%;
+    }
+    .credentials-container{
+        background:#F2F4F7;
+        box-shadow: none;
+        border-radius: 0px; 
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Horizontally center items */
+        justify-content: center; /* Vertically center items */
+        text-align: center; /* Center text inside the container */
+        width: 100%;
+        height: 70vh;
+    }
+    
+    .credentials-container form {
+
+        display: flex;
+        flex-direction: column; /* Stack form elements vertically */
+        align-items: center; /* Center form elements horizontally */
+        width: 100%;
+        background-color: transparent;
+        margin-top: -30vh;
+    }
+    .credentials-container input
+    {
+        width: 80%;
+        max-width: 650px;/* Limit width to avoid stretching too much */
+        height: 30px;
+        padding: 10px;
+        border: 0px;
+        border-radius: 10px; 
+        font-size: 14px;
+        background-color: #fff;
+        color: #444444;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .credentials-container form button{
+        width: 85%;
+        max-width: 650px;/* Limit width to avoid stretching too much */
+        height: 50px;
+        
+        border-radius: 30px; 
+        margin-top: 40px;
+        
+    }
+
+    .credentials-container .passwd p{
+        margin: 0px 0px;
+        margin-left: 60vw;
+        margin-top: 5px;
+       
+    }
+
+    .logo-container .company-name{
+        display: none;
+    }
+
+    .credentials-container .login-as-caretaker{
+        margin-top: 27px;
+       
+    }
+    .credentials-container .login-as-caretaker a{
+        color: #012970;
+        font-size: 20px;
+    }
+    .credentials-container .line{
+        display: none;
+    }
+    .credentials-container .or-signup{
+        background: none;
+        width: 87%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        height: 50px;
+
+        transform: translateY(100px);
+    }
+    .credentials-container .or-signup button{
+       border-radius: 50px;
+    }
+    footer{
+        position: absolute;
+        background: none;
+        text-align: center;
+        transform: translateY(-40px);
+        color: #444444;
+        width: 100vw;
+    }
+    .line-footer{
+        background: #444444;
+        width: 90%;
+        height: 1px;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 323px){
+    .credentials-container .passwd p{
+        margin-left: 50vw;
+       
+    }
+}
+@media(min-width: 769px) and (max-width: 1028px){
+    .main{
+        width: 95%;
+    }
+    .credentials-container{
+        width: 70%;
+        height: 42%;
+    }
+}
+@media(min-width: 1029px) and (max-width: 1250px){
+    .main{
+        width: 80%;
+    }
+    .credentials-container{
+        width: 70%;
+        height: 42%;
+    }
+}

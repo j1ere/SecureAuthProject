@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> barcode for {{ profile.full_names }}</h1>
+    <p>scan the code below to complete the registration process:</p>
+    <img src="data:image/png;base64,{{ barcode_image }}" alt="QR code Error!">
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <title>login HouseHub</title>
+</head>
+<body>
+    <section class="main">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="{% static 'Designer(1).jpeg' %}" alt="Error!">
+            </div>
+            <div class="company-name">
+                <p class="the-name">HOUSE HUB</p>
+                <p class="the-slogan">with you for you!</p>
+            </div>
+        </div>
+        <div class="credentials-container">
+            <form action="#">
+                <input type="text" placeholder="Username or email address">
+                <input type="password" placeholder="Password">
+                <button type="submit">Log in </button>
+            </form>
+            <div class="passwd">
+                <p class="forgot-password"><a href="#">forgot password?</a></p>
+            </div>
+           
+            <!-- <p class="login-as-caretaker"><a href="#">Login as caretaker</a></p> -->
+            <div class="line"></div>
+            <div class="or-signup">
+                <button onclick="window.location.href='{% url 'signup' %}'">or Sign Up</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="line-footer"></div>
+        <p>&copy; 2024 HouseHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
